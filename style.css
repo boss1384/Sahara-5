@@ -1,0 +1,424 @@
+/* ========================= */
+/* SAHARA FLASH STYLE.CSS */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+    background:#1e293b;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    border-bottom:3px solid #22c55e;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo h1{
+    color:#22c55e;
+    font-size:32px;
+}
+
+.logo span{
+    color:#facc15;
+}
+
+.logo p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* ========================= */
+/* NAVIGATION */
+/* ========================= */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+nav li{
+    padding:10px 18px;
+    background:#334155;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+nav li:hover{
+    background:#22c55e;
+    color:black;
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* SEARCH */
+/* ========================= */
+
+.search input{
+    width:250px;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+    font-size:15px;
+}
+
+.search input::placeholder{
+    color:#94a3b8;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+
+.section{
+    display:none;
+    padding:20px;
+}
+
+.section.active{
+    display:block;
+}
+
+.section-title{
+    margin-bottom:20px;
+    color:#22c55e;
+    font-size:28px;
+}
+
+/* ========================= */
+/* MATCH GRID */
+/* ========================= */
+
+.matches-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(320px,1fr));
+    gap:20px;
+}
+
+/* ========================= */
+/* MATCH CARD */
+/* ========================= */
+
+.match-card{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid #334155;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.match-card:hover{
+    transform:translateY(-5px);
+    border-color:#22c55e;
+}
+
+/* ========================= */
+/* MATCH HEADER */
+/* ========================= */
+
+.match-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    background:#0f172a;
+    font-size:14px;
+    border-bottom:1px solid #334155;
+}
+
+/* ========================= */
+/* LIVE BADGE */
+/* ========================= */
+
+.live-badge{
+    background:red;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0.5;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+/* ========================= */
+/* TEAMS */
+/* ========================= */
+
+.teams{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 15px;
+    text-align:center;
+}
+
+.team{
+    width:35%;
+}
+
+.team-logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.team-name{
+    margin-top:10px;
+    font-size:14px;
+    font-weight:bold;
+    line-height:1.4;
+}
+
+/* ========================= */
+/* SCORE */
+/* ========================= */
+
+.score{
+    font-size:35px;
+    font-weight:bold;
+    color:#22c55e;
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background:rgba(0,0,0,0.9);
+}
+
+/* ========================= */
+/* MODAL CONTENT */
+/* ========================= */
+
+.modal-content{
+    background:#1e293b;
+    width:95%;
+    max-width:1200px;
+    margin:30px auto;
+    border-radius:15px;
+    overflow:hidden;
+    position:relative;
+    border:1px solid #334155;
+}
+
+/* ========================= */
+/* CLOSE BUTTON */
+/* ========================= */
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:35px;
+    cursor:pointer;
+    color:white;
+    transition:0.3s;
+}
+
+.close:hover{
+    color:red;
+}
+
+/* ========================= */
+/* TABS */
+/* ========================= */
+
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+    background:#334155;
+}
+
+.tab-btn{
+    flex:1;
+    padding:15px;
+    border:none;
+    background:none;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+    font-size:15px;
+}
+
+.tab-btn:hover{
+    background:#475569;
+}
+
+.tab-btn.active{
+    background:#22c55e;
+    color:black;
+}
+
+/* ========================= */
+/* TAB CONTENT */
+/* ========================= */
+
+.tab-content{
+    display:none;
+    padding:20px;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+/* ========================= */
+/* LINEUPS */
+/* ========================= */
+
+.lineups{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.lineup-team{
+    background:#334155;
+    padding:20px;
+    border-radius:12px;
+}
+
+.lineup-team h3{
+    margin-bottom:15px;
+    color:#22c55e;
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.stat-category{
+    background:#334155;
+    padding:20px;
+    border-radius:12px;
+}
+
+.stat-item{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #475569;
+}
+
+/* ========================= */
+/* EVENTS */
+/* ========================= */
+
+#events-content li{
+    background:#334155;
+    margin-bottom:10px;
+    border-radius:10px;
+}
+
+/* ========================= */
+/* ODDS */
+/* ========================= */
+
+#odds-content p{
+    background:#334155;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+/* ========================= */
+/* PREVIEW */
+/* ========================= */
+
+#preview-content{
+    line-height:1.8;
+}
+
+/* ========================= */
+/* STANDINGS TABLE */
+/* ========================= */
+
+#standings-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+#standings-table th,
+#standings-table td{
+    padding:12px;
+    border-bottom:1px solid #334155;
+    text-align:center;
+}
+
+#standings-table th{
+    background:#1e293b;
+    color:#22c55e;
+}
+
+#standings-table tr:hover{
+    background:#1e293b;
+}
+
+/
